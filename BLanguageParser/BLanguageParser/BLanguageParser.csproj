@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5629B44B-4033-448D-BFB2-B749C06F016A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLanguageParser</RootNamespace>
+    <AssemblyName>BLanguageParser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Beval\ArgumentTokenizer.cs" />
+    <Compile Include="Beval\EvaluationConstants.cs" />
+    <Compile Include="Beval\EvaluationException.cs" />
+    <Compile Include="Beval\EvaluationHelper.cs" />
+    <Compile Include="Beval\EvaluationResult.cs" />
+    <Compile Include="Beval\Evaluator.cs" />
+    <Compile Include="Beval\ExpressionOperand.cs" />
+    <Compile Include="Beval\ExpressionOperator.cs" />
+    <Compile Include="Beval\ExpressionTree.cs" />
+    <Compile Include="Beval\function\Function.cs" />
+    <Compile Include="Beval\function\FunctionConstants.cs" />
+    <Compile Include="Beval\function\FunctionException.cs" />
+    <Compile Include="Beval\function\FunctionGroup.cs" />
+    <Compile Include="Beval\function\FunctionHelper.cs" />
+    <Compile Include="Beval\function\FunctionResult.cs" />
+    <Compile Include="Beval\function\math\Abs.cs" />
+    <Compile Include="Beval\function\math\Acos.cs" />
+    <Compile Include="Beval\function\math\Asin.cs" />
+    <Compile Include="Beval\function\math\Atan.cs" />
+    <Compile Include="Beval\function\math\Atan2.cs" />
+    <Compile Include="Beval\function\math\Ceil.cs" />
+    <Compile Include="Beval\function\math\Cos.cs" />
+    <Compile Include="Beval\function\math\Exp.cs" />
+    <Compile Include="Beval\function\math\Floor.cs" />
+    <Compile Include="Beval\function\math\IEEEremainder.cs" />
+    <Compile Include="Beval\function\math\Log.cs" />
+    <Compile Include="Beval\function\math\MathFunctions.cs" />
+    <Compile Include="Beval\function\math\Max.cs" />
+    <Compile Include="Beval\function\math\Min.cs" />
+    <Compile Include="Beval\function\math\Pow.cs" />
+    <Compile Include="Beval\function\math\Random.cs" />
+    <Compile Include="Beval\function\math\Sqrt.cs" />
+    <Compile Include="Beval\function\string\CharAt.cs" />
+    <Compile Include="Beval\function\string\CompareTo.cs" />
+    <Compile Include="Beval\function\string\CompareToIgnoreCase.cs" />
+    <Compile Include="Beval\function\string\Concat.cs" />
+    <Compile Include="Beval\function\string\EndsWith.cs" />
+    <Compile Include="Beval\function\string\Equals.cs" />
+    <Compile Include="Beval\function\string\EqualsIgnoreCase.cs" />
+    <Compile Include="Beval\function\string\Eval.cs" />
+    <Compile Include="Beval\function\string\IndexOf.cs" />
+    <Compile Include="Beval\function\string\LastIndexOf.cs" />
+    <Compile Include="Beval\function\string\Length.cs" />
+    <Compile Include="Beval\function\string\Replace.cs" />
+    <Compile Include="Beval\function\string\StartsWith.cs" />
+    <Compile Include="Beval\function\string\StringFunctions.cs" />
+    <Compile Include="Beval\function\string\Substring.cs" />
+    <Compile Include="Beval\function\string\ToLowerCase.cs" />
+    <Compile Include="Beval\function\string\ToUpperCase.cs" />
+    <Compile Include="Beval\function\string\Trim.cs" />
+    <Compile Include="Beval\GlobalRandom.cs" />
+    <Compile Include="Beval\NextOperator.cs" />
+    <Compile Include="Beval\operator\AbstractOperator.cs" />
+    <Compile Include="Beval\operator\AdditionOperator.cs" />
+    <Compile Include="Beval\operator\BooleanAndOperator.cs" />
+    <Compile Include="Beval\operator\BooleanNotOperator.cs" />
+    <Compile Include="Beval\operator\BooleanOrOperator.cs" />
+    <Compile Include="Beval\operator\ClosedParenthesesOperator.cs" />
+    <Compile Include="Beval\operator\DivisionOperator.cs" />
+    <Compile Include="Beval\operator\EqualOperator.cs" />
+    <Compile Include="Beval\operator\GreaterThanOperator.cs" />
+    <Compile Include="Beval\operator\GreaterThanOrEqualOperator.cs" />
+    <Compile Include="Beval\operator\LessThanOperator.cs" />
+    <Compile Include="Beval\operator\LessThanOrEqualOperator.cs" />
+    <Compile Include="Beval\operator\ModulusOperator.cs" />
+    <Compile Include="Beval\operator\MultiplicationOperator.cs" />
+    <Compile Include="Beval\operator\NotEqualOperator.cs" />
+    <Compile Include="Beval\operator\OpenParenthesesOperator.cs" />
+    <Compile Include="Beval\operator\Operator.cs" />
+    <Compile Include="Beval\operator\SubtractionOperator.cs" />
+    <Compile Include="Beval\ParsedFunction.cs" />
+    <Compile Include="Beval\StringHelperClass.cs" />
+    <Compile Include="Beval\VariableResolver.cs" />
+    <Compile Include="Domin\MyArray.cs" />
+    <Compile Include="Function\Auto.cs" />
+    <Compile Include="Function\BDoWhile.cs" />
+    <Compile Include="Function\Bfor.cs" />
+    <Compile Include="Function\Bgoto.cs" />
+    <Compile Include="Function\Bif.cs" />
+    <Compile Include="Function\Break.cs" />
+    <Compile Include="Function\Bswitch.cs" />
+    <Compile Include="Function\BWhile.cs" />
+    <Compile Include="Function\Getchar.cs" />
+    <Compile Include="Function\Getnumb.cs" />
+    <Compile Include="Function\Note.cs" />
+    <Compile Include="Function\BOperator.cs" />
+    <Compile Include="Function\Putchar.cs" />
+    <Compile Include="Function\Putnumb.cs" />
+    <Compile Include="Function\Putstr.cs" />
+    <Compile Include="Function\UnaryOperation.cs" />
+    <Compile Include="Function\WCheck.cs" />
+    <Compile Include="Parser\Compile.cs" />
+    <Compile Include="Exception\NotAVarException.cs" />
+    <Compile Include="Exception\NotDefineVarException.cs" />
+    <Compile Include="Exception\NotFoundMarkException.cs" />
+    <Compile Include="Exception\WrongGrammarException.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parser\FParser.cs" />
+    <Compile Include="Parser\ParserReNamed.cs" />
+    <Compile Include="Parser\Parser_ReNamed.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Domin\WordType.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
