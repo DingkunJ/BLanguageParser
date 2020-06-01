@@ -1,0 +1,9 @@
+F:\C#\BLanguageParser\BLanguageParser\bin\Debug\BLanguageParser.exe.config
+F:\C#\BLanguageParser\BLanguageParser\bin\Debug\BLanguageParser.exe
+F:\C#\BLanguageParser\BLanguageParser\bin\Debug\BLanguageParser.pdb
+F:\C#\BLanguageParser\BLanguageParser\obj\Debug\BLanguageParser.csprojResolveAssemblyReference.cache
+F:\C#\BLanguageParser\BLanguageParser\obj\Debug\BLanguageParser.Properties.Resources.resources
+F:\C#\BLanguageParser\BLanguageParser\obj\Debug\BLanguageParser.csproj.GenerateResource.Cache
+F:\C#\BLanguageParser\BLanguageParser\obj\Debug\BLanguageParser.exe
+F:\C#\BLanguageParser\BLanguageParser\obj\Debug\BLanguageParser.pdb
+F:\C#\BLanguageParser\BLanguageParser\obj\Debug\BLanguageBParser.Form1.resources
